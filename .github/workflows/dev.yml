@@ -1,0 +1,60 @@
+name: dev checks
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  # Allows other workflows to trigger this workflow
+  workflow_call:
+    inputs:
+      deploy-dev-docs:
+        description: "Deploy the docs as dev version to the site"
+        type: boolean
+        required: false
+        default: true
+
+jobs:
+  test:
+    name: Run tests and auto checks on code
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Get repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Poetry
+        uses: abatilo/actions-poetry@v2
+
+      - name: Setup a local virtual environment # for caching purposes
+        run: |
+          poetry config virtualenvs.create true --local
+          poetry config virtualenvs.in-project true --local
+
+      - name: Cache for virtual environment
+        uses: actions/cache@v3
+        with:
+          path: ./.venv
+          key: venv-${{ matrix.os }}-${{ matrix.python-version }}-${{ hashFiles('poetry.lock') }}
+
+      - name: Install dependencies
+        run: poetry install --with dev
+
+      - name: Find tox
+        run: poetry run tox --version
+
+      # tox handles the logic for what tests etc. to run. See tox.ini for details.
+      - name: Run tox (includes tests, format, lint, docs)
+        run: poetry run tox --current-env

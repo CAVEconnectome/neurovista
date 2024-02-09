@@ -1,0 +1,6 @@
+[tool.commitizen]
+major_version_zero = true        # for initial alpha code
+name = "cz_conventional_commits"
+tag_format = "v$version"
+update_changelog_on_bump = false
+version_provider = 'poetry'
