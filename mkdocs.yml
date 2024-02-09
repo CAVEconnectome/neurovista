@@ -2,6 +2,7 @@ site_name: neurovista
 site_url: https://CAVEconnectome.github.io/neurovista
 repo_url: https://github.com/CAVEconnectome/neurovista
 repo_name: CAVEconnectome/neurovista
+edit_uri: edit/main/docs/
 #strict: true
 nav:
   - Home: index.md
