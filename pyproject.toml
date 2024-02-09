@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "neurovista"
-version = "0.1.0"
+version = "0.1.1"
 homepage = "https://github.com/CAVEconnectome/neurovista"
 description = "Python package for plotting neural morpholgies with PyVista."
 authors = ["Ben Pedigo <ben.pedigo@alleninstitute.org>"]
