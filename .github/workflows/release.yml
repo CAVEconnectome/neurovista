@@ -16,23 +16,10 @@ on:
         type: boolean
         required: true
         default: true
-      skip-tests:
-        description: "Skip tests"
-        type: boolean
-        required: true
-        default: false
 
 jobs:
   test:
-    name: Run tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run tests
-        if: ${{ github.event.inputs.skip-tests == 'false' }}
-        uses: ./.github/workflows/dev.yml
-      - name: Skip tests
-        if: ${{ github.event.inputs.skip-tests == 'true' }}
-        run: echo "Skipping tests"
+    uses: ./.github/workflows/dev.yml
 
   bump:
     name: Bump version
