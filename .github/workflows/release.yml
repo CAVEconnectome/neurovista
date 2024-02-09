@@ -49,7 +49,7 @@ jobs:
         run: pip install commitizen
       - name: Bump version with commitizen
         run: |
-          cz bump --increment ${{ github.event.inputs.part }}
+          cz bump --yes --increment ${{ github.event.inputs.part }}
       - name: Commit and push with tags
         if: ${{ github.event.inputs.dry-run == 'false' }}
         run: git push --follow-tags
