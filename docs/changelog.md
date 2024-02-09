@@ -1,3 +1,5 @@
-{%
-  include-markdown "../CHANGELOG.md"
-%}
+---
+title: Changelog
+---
+
+_Coming soon_

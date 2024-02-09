@@ -6,7 +6,6 @@ repo_name: CAVEconnectome/neurovista
 nav:
   - Home: index.md
   - Installation: installation.md
-  - Usage: usage.md
   - Reference:
     - reference/reference.md
   - Contributing: contributing.md
@@ -14,10 +13,11 @@ nav:
 theme:
   name: material
   language: en
-  #logo: assets/logo.png
+  logo: images/logo-cleanest.png
+  favicon: images/logo-cleanest.png
   palette:
     scheme: preference
-    primary: indigo
+    primary: black
     accent: indigo
   icon:
     repo: fontawesome/brands/github
@@ -27,12 +27,12 @@ theme:
     # - navigation.path
     - navigation.prune
     # - navigation.sections # toggle to have sections in side nav
-    # - navigation.tabs # toggle to mainly use top nav
+    - navigation.tabs # toggle to mainly use top nav
     - navigation.tabs.sticky
     - content.action.edit
     - content.action.view
     - toc.follow
-    # - toc.integrate # whether to include the toc in the main nav bar to the left
+    - toc.integrate # whether to include the toc in the main nav bar to the left
     - navigation.top
     - search.suggest
     - search.highlight
@@ -92,14 +92,15 @@ plugins:
             separate_signature: false
             show_signature_annotations: false
             unwrap_annotated: false
-            heading_level: 4
+            heading_level: 2
+  - macros
   - autorefs
   - section-index
   # - git-authors: # this one is more email-based
   #     show_contribution: true
   #     authorship_threshold_percent: 5
   - git-committers:
-      repository: bdpedigo/networkframe
+      repository: CAVEconnectome/neurovista
       branch: main
   - git-revision-date-localized:
       enable_creation_date: true
@@ -115,6 +116,10 @@ extra:
       link: "mailto:ben.pedigo@alleninstitute.org"
   version:
     provider: mike
+  names: 
+    repo_title: neurovista
+    package: neurovista
+    main_branch: main
   # to enable disqus, uncomment the following and put your disqus id below
   # disqus: disqus_id
 # uncomment the following and put your google tracking id below to enable GA

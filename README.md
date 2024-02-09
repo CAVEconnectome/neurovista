@@ -1,22 +1,16 @@
 # neurovista
 
-
 [![pypi](https://img.shields.io/pypi/v/neurovista.svg)](https://pypi.org/project/neurovista/)
 [![python](https://img.shields.io/pypi/pyversions/neurovista.svg)](https://pypi.org/project/neurovista/)
 [![Build Status](https://github.com/CAVEconnectome/neurovista/actions/workflows/dev.yml/badge.svg)](https://github.com/CAVEconnectome/neurovista/actions/workflows/dev.yml)
 [![codecov](https://codecov.io/gh/CAVEconnectome/neurovista/branch/main/graphs/badge.svg)](https://codecov.io/github/CAVEconnectome/neurovista)
 
-
-
 Python package for plotting neural morpholgies with PyVista
-
-
 
 - Documentation: <https://CAVEconnectome.github.io/neurovista>
 - GitHub: <https://github.com/CAVEconnectome/neurovista>
 - PyPI: <https://pypi.org/project/neurovista/>
 - Free software: MIT
-  
 
 ## Features
 
