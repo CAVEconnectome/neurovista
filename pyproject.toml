@@ -1,28 +1,25 @@
 [tool]
 [tool.poetry]
-name = "neurovista"
-version = "0.1.1"
-homepage = "https://github.com/CAVEconnectome/neurovista"
-description = "Python package for plotting neural morpholgies with PyVista."
 authors = ["Ben Pedigo <ben.pedigo@alleninstitute.org>"]
-readme = "README.md"
-license =  "MIT"
-classifiers=[
+classifiers = [
     'Development Status :: 2 - Pre-Alpha',
     'Intended Audience :: Developers',
     'License :: OSI Approved :: MIT License',
     'Natural Language :: English',
     'Programming Language :: Python :: 3.11',
 ]
-packages = [
-    { include = "neurovista" },
-    { include = "tests", format = "sdist" },
-]
+description = "Python package for plotting neural morpholgies with PyVista."
+homepage = "https://github.com/CAVEconnectome/neurovista"
+license = "MIT"
+name = "neurovista"
+packages = [{ include = "neurovista" }, { include = "tests", format = "sdist" }]
+readme = "README.md"
+version = "0.1.1"
 
 [tool.poetry.dependencies]
-python = ">=3.11.0,<3.12.0"
 beartype = "^0.16.4"
-pyvista = {extras = ["jupyter"], version = "^0.43.3"}
+python = ">=3.11.0,<3.12.0"
+pyvista = { extras = ["jupyter"], version = "^0.43.3" }
 
 [tool.poetry.group.dev.dependencies]
 commitizen = "^3.13.0"
@@ -34,6 +31,7 @@ mkdocs-git-committers-plugin-2 = "^2.2.2"
 mkdocs-git-revision-date-localized-plugin = "^1.2.2"
 mkdocs-include-markdown-plugin = "^6.0.4"
 mkdocs-jupyter = "^0.24.6"
+mkdocs-macros-plugin = "^1.0.5"
 mkdocs-material = "^9.5.2"
 mkdocs-material-extensions = "^1.3.1"
 mkdocs-section-index = "^0.3.8"
