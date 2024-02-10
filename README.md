@@ -19,3 +19,11 @@ Python package for plotting neural morpholgies with PyVista
 ## Credits
 
 This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [bdpedigo/cookiecutter-pypackage](https://github.com/bdpedigo/cookiecutter-pypackage) project template (which builds on several previous versions).
+
+## Installation notes
+
+On Mac silicon, you may have to do something like
+
+```
+export HDF5_DIR=/opt/homebrew/Cellar/hdf5/1.14.2/
+```
