@@ -21,6 +21,7 @@ beartype = "^0.16.4"
 pandas = "^2.2.0"
 python = ">=3.11.0,<3.12.0"
 pyvista = { extras = ["jupyter"], version = "^0.43.3" }
+networkframe = "^0.5.1"
 
 [tool.poetry.group.dev.dependencies]
 commitizen = "^3.13.0"
@@ -45,6 +46,7 @@ ruff = "^0.1.7"
 tox = "^4.11.4"
 tox-current-env = "^0.0.11"
 twine = "^4.0.2"
+ipykernel = "^6.29.2"
 
 [tool.poetry.group.navis]
 optional = true

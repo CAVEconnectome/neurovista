@@ -4204,6 +4204,25 @@ files = [
 ]
 
 [[package]]
+name = "networkframe"
+version = "0.5.1"
+description = "Lightweight representations of networks using Pandas DataFrames."
+optional = false
+python-versions = ">=3.11,<3.13"
+files = [
+    {file = "networkframe-0.5.1-py3-none-any.whl", hash = "sha256:525c4c989ed2f17d5828978f89727ee732f3bdaf39d899245e34dc826f18bd10"},
+    {file = "networkframe-0.5.1.tar.gz", hash = "sha256:0d2ec59efb87ef8a740165a22423a380f25d2c9b9812a4934e3e762574a72f39"},
+]
+
+[package.dependencies]
+beartype = ">=0.16.4,<0.17.0"
+networkx = ">=2.8.8"
+pandas = ">=2.1.4,<3.0.0"
+scipy = ">=1.11.4,<2.0.0"
+setuptools = ">=69.0.3,<70.0.0"
+types-setuptools = ">=69.0.0.20240115,<70.0.0.0"
+
+[[package]]
 name = "networkx"
 version = "2.8.8"
 description = "Python package for creating and manipulating graphs and networks"
@@ -6827,6 +6846,17 @@ files = [
 ]
 
 [[package]]
+name = "types-setuptools"
+version = "69.0.0.20240125"
+description = "Typing stubs for setuptools"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "types-setuptools-69.0.0.20240125.tar.gz", hash = "sha256:22ad498cb585b22ce8c97ada1fccdf294a2e0dd7dc984a28535a84ea82f45b3f"},
+    {file = "types_setuptools-69.0.0.20240125-py3-none-any.whl", hash = "sha256:00835f959ff24ebc32c55da8df9d46e8df25e3c4bfacb43e98b61fde51a4bc41"},
+]
+
+[[package]]
 name = "typing-extensions"
 version = "4.9.0"
 description = "Backported and Experimental Type Hints for Python 3.8+"
@@ -7427,4 +7457,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11.0,<3.12.0"
-content-hash = "cf810154f91f07754f928c928ed1a6b953cf8ab91f8d6a676f828c246f707c27"
+content-hash = "f693dca64db6fd4732eb7dc6021f7fefb87b9728ad29091454eee1be7c0e8004"
