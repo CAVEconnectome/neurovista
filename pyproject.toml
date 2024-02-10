@@ -46,18 +46,24 @@ tox = "^4.11.4"
 tox-current-env = "^0.0.11"
 twine = "^4.0.2"
 
+[tool.poetry.group.navis]
+optional = true
+
 
 [tool.poetry.group.navis.dependencies]
 navis = "^1.5.0"
 
-
-[tool.poetry.group.all.dependencies]
-navis = "^1.5.0"
-
+[tool.poetry.group.meshparty]
+optional = true
 
 [tool.poetry.group.meshparty.dependencies]
 brotlicffi = "^1.1.0.0"
 tables = "^3.9.2"
+# somehow specing these manually was necessary to get poetry to resolve for meshparty
+botocore = "^1.31.58"
+cloud-files = "^4.21.1"
+cloud-volume = "^8.27.0"
+meshparty = "^1.16.14"
 
 [build-system]
 build-backend = "poetry.masonry.api"
