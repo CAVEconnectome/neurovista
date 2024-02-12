@@ -3,7 +3,7 @@
 # if not, then do not import the module
 
 try:
-    import navis
+    import navis  # noqa: F401
 
     from .navis import treeneuron_to_networkframe
 
