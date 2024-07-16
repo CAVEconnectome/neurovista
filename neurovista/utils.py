@@ -28,6 +28,20 @@ def set_up_camera(
     plotter.camera.elevation = elevation
 
 
+def center_camera(
+    plotter: pv.Plotter,
+    center: np.ndarray,
+    distance: float,
+    up: Literal["x", "y", "z", "-x", "-y", "-z"] = "-y",
+    elevation: Union[float, int] = 25,
+):
+    plotter.camera_position = "zx"
+    plotter.camera.focal_point = center
+    plotter.camera.position = center + np.array([0, 0, distance])
+    plotter.camera.up = UP_MAP[up]
+    plotter.camera.elevation = elevation
+
+
 def _edges_to_lines(nodes, edges):
     iloc_map = dict(zip(nodes.index.values, range(len(nodes))))
     iloc_edges = edges[["source", "target"]].applymap(lambda x: iloc_map[x])
@@ -37,3 +51,28 @@ def _edges_to_lines(nodes, edges):
     lines[:, 1:3] = iloc_edges[["source", "target"]].values
 
     return lines
+
+
+def to_line_polydata(
+    nodes: np.ndarray,
+    edges: np.ndarray,
+):
+    points = nodes.astype(float)
+
+    lines = np.hstack([np.full((len(edges), 1), 2), edges])
+
+    poly = pv.PolyData(points, lines=lines)
+    return poly
+
+
+def to_mesh_polydata(
+    nodes: np.ndarray,
+    faces: np.ndarray,
+):
+    points = nodes.astype(float)
+
+    faces = np.hstack([np.full((len(faces), 1), 3), faces])
+
+    poly = pv.PolyData(points, faces=faces)
+
+    return poly
