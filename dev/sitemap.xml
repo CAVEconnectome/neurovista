@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://CAVEconnectome.github.io/neurovista/dev/</loc>
-         <lastmod>2024-02-12</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://CAVEconnectome.github.io/neurovista/dev/api/</loc>
-         <lastmod>2024-02-12</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://CAVEconnectome.github.io/neurovista/dev/changelog/</loc>
-         <lastmod>2024-02-12</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://CAVEconnectome.github.io/neurovista/dev/contributing/</loc>
-         <lastmod>2024-02-12</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://CAVEconnectome.github.io/neurovista/dev/installation/</loc>
-         <lastmod>2024-02-12</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://CAVEconnectome.github.io/neurovista/dev/usage/</loc>
-         <lastmod>2024-02-12</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://CAVEconnectome.github.io/neurovista/dev/reference/reference/</loc>
-         <lastmod>2024-02-12</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
