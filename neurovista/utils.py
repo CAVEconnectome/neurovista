@@ -76,3 +76,19 @@ def to_mesh_polydata(
     poly = pv.PolyData(points, faces=faces)
 
     return poly
+
+
+def bounds_to_box(bounds: np.ndarray, **kwargs):
+    assert bounds.shape == (2, 3)
+    # pyvista expects  (xMin, xMax, yMin, yMax, zMin, zMax)
+    box = np.array(
+        [
+            bounds[0, 0],
+            bounds[1, 0],
+            bounds[0, 1],
+            bounds[1, 1],
+            bounds[0, 2],
+            bounds[1, 2],
+        ]
+    )
+    return pv.Box(box, **kwargs)
