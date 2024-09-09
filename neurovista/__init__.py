@@ -6,6 +6,7 @@ from .utils import (
     set_up_camera,
     to_line_polydata,
     to_mesh_polydata,
+    mesh_to_graph,
 )
 
 __all__ = [
@@ -14,4 +15,5 @@ __all__ = [
     "to_mesh_polydata",
     "center_camera",
     "bounds_to_box",
+    "mesh_to_graph",
 ]

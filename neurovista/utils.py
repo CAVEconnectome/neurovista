@@ -92,3 +92,12 @@ def bounds_to_box(bounds: np.ndarray, **kwargs):
         ]
     )
     return pv.Box(box, **kwargs)
+
+
+def mesh_to_graph(mesh: pv.PolyData):
+    assert mesh.is_all_triangles
+    faces = mesh.faces.reshape(-1, 4)[:, 1:]
+    edges = np.vstack([faces[:, [0, 1]], faces[:, [1, 2]], faces[:, [2, 0]]])
+    edges = np.sort(edges, axis=1)
+    nodes = np.array(mesh.points)
+    return nodes, edges
